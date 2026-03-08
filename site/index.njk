@@ -1,0 +1,69 @@
+---
+layout: layouts/home.njk
+title: GRC Engineer Directory — Find a GRC Engineer to Hire
+permalink: /index.html
+---
+<section class="hero" id="hero">
+  <div id="tsparticles" class="hero-particles"></div>
+  <div class="hero-content">
+    <h1>Find a GRC Engineer</h1>
+    <p class="hero-tagline">Browse verified GRC professionals by specialization, framework expertise, and availability.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-target="{{ collections.engineers.length }}">0</span> Engineers
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-target="{{ collections.engineers | uniqueValues('frameworks') | length }}">0</span> Frameworks
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num" data-target="{{ collections.engineers | uniqueValues('specializations') | length }}">0</span> Specializations
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="insights">
+  <h2>Community Insights</h2>
+  <div class="insights-grid">
+    <div class="insight-card">
+      <h3>Top Specializations</h3>
+      <canvas id="chart-specs"></canvas>
+    </div>
+    <div class="insight-card">
+      <h3>Framework Coverage</h3>
+      <canvas id="chart-frameworks"></canvas>
+    </div>
+    <div class="insight-card">
+      <h3>Availability</h3>
+      <canvas id="chart-available"></canvas>
+    </div>
+    <div class="insight-card">
+      <h3>Languages & Tools</h3>
+      <canvas id="chart-languages"></canvas>
+    </div>
+  </div>
+</section>
+
+<script id="chart-data" type="application/json">
+{
+  "specializations": {{ collections.engineers | countValues("specializations") | dump | safe }},
+  "frameworks": {{ collections.engineers | countValues("frameworks") | dump | safe }},
+  "available_for": {{ collections.engineers | countValues("available_for") | dump | safe }},
+  "languages": {{ collections.engineers | countValues("languages") | dump | safe }}
+}
+</script>
+
+{% include "partials/filter-bar.njk" %}
+
+<section class="directory">
+  <p class="results-count"><span id="results-count">{{ collections.engineers.length }}</span> engineers</p>
+  <div class="card-grid">
+    {% for engineer in collections.engineers %}
+      {% include "partials/engineer-card.njk" %}
+    {% endfor %}
+  </div>
+  <p id="no-results" class="no-results" style="display:none">No engineers match your filters.</p>
+</section>
+
+<script src="/site/assets/js/search.js"></script>
+<script defer src="/site/assets/js/effects.js"></script>

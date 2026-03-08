@@ -3,10 +3,11 @@
 name: Jonathan Perez
 github: GRCJP
 specializations:
-  - GRC Engineering
-  - Vulnerability Management Automation
+  - Vulnerability Management
   - Cloud Security
   - Compliance Automation
+languages:
+  - Python
 
 # OPTIONAL FIELDS - Remove or leave blank if not applicable
 title: Senior Cybersecurity Specialist, GRC Engineer
@@ -22,15 +23,15 @@ blog: https://securitybyjp.com/
 frameworks:
   - NIST RMF
   - NIST CSF
-  - NIST 800-53 Rev 5
+  - NIST 800-53
   - FedRAMP
   - SOC 2
   - ISO 27001
-  - IRS PUB 1075
+  - IRS Pub 1075
   - COBIT
-  - GAO Greenbook
+  - GAO Green Book
   - CMS ARC-AMPE
-  - CMMC 2.0
+  - CMMC
 
 # Professional certifications (optional)
 certifications:

@@ -1,0 +1,112 @@
+---
+layout: layouts/base.njk
+---
+<div class="profile">
+  <div class="profile-back">
+    <a href="/">&larr; Back to directory</a>
+  </div>
+
+  <div class="profile-header">
+    <img
+      src="https://github.com/{{ github }}.png?size=200"
+      alt="{{ name }}"
+      class="profile-avatar"
+      width="120"
+      height="120"
+      loading="lazy"
+    >
+    <div class="profile-info">
+      <h1 class="profile-name">{{ name }}</h1>
+      {% if title %}<p class="profile-title">{{ title }}</p>{% endif %}
+      {% if company %}<p class="profile-company">{{ company }}</p>{% endif %}
+      {% if location %}<p class="profile-location">{{ location }}</p>{% endif %}
+      <div class="profile-socials">
+        <a href="https://github.com/{{ github }}" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+        {% if linkedin %}<a href="{{ linkedin }}" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>{% endif %}
+        {% if blog %}<a href="{{ blog }}" target="_blank" rel="noopener" title="Blog">Blog</a>{% endif %}
+        {% if website %}<a href="{{ website }}" target="_blank" rel="noopener" title="Website">Website</a>{% endif %}
+        {% if portfolio %}<a href="{{ portfolio }}" target="_blank" rel="noopener" title="Portfolio">Portfolio</a>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-sections">
+    {% if specializations and specializations.length %}
+    <div class="profile-section">
+      <h2>Specializations</h2>
+      <div class="tags">
+        {% for s in specializations %}<span class="tag tag-accent">{{ s }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if languages and languages.length %}
+    <div class="profile-section">
+      <h2>Languages & Tools</h2>
+      <div class="tags">
+        {% for l in languages %}<span class="tag tag-language">{{ l }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if frameworks and frameworks.length %}
+    <div class="profile-section">
+      <h2>Frameworks</h2>
+      <div class="tags">
+        {% for f in frameworks %}<span class="tag tag-outline">{{ f }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if certifications and certifications.length %}
+    <div class="profile-section">
+      <h2>Certifications</h2>
+      <div class="tags">
+        {% for c in certifications %}<span class="tag tag-outline">{{ c }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if available_for and available_for.length %}
+    <div class="profile-section">
+      <h2>Available For</h2>
+      <div class="tags">
+        {% for a in available_for %}<span class="tag tag-available">{{ a }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <div class="profile-lower">
+    {% if projects and projects.length %}
+    <div class="profile-section profile-projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        {% for p in projects %}
+        <div class="project-card">
+          <a href="{{ p.url }}" target="_blank" rel="noopener" class="project-name">{{ p.name }}</a>
+          {% if p.description %}<p class="project-desc">{{ p.description }}</p>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if content | trim %}
+    <div class="profile-body">
+      {{ content | safe }}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="profile-cta">
+    <p>Interested in working with {{ name }}?</p>
+    <div class="profile-cta-links">
+      {% if linkedin %}<a href="{{ linkedin }}" class="btn btn-primary" target="_blank" rel="noopener">Connect on LinkedIn</a>{% endif %}
+      {% if blog %}<a href="{{ blog }}" class="btn btn-outline" target="_blank" rel="noopener">Visit Blog</a>{% endif %}
+      {% if website %}<a href="{{ website }}" class="btn btn-outline" target="_blank" rel="noopener">Visit Website</a>{% endif %}
+      {% if portfolio %}<a href="{{ portfolio }}" class="btn btn-outline" target="_blank" rel="noopener">Visit Portfolio</a>{% endif %}
+    </div>
+  </div>
+</div>

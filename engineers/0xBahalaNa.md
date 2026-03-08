@@ -3,10 +3,11 @@
 name: Luigi Carpio
 github: 0xBahalaNa
 specializations:
-  - GRC Engineering
   - Compliance Automation
   - Cloud Security
-  - Identity Engineering (IAM/IGA)
+  - Identity & Access Management
+languages:
+  - Python
 
 # OPTIONAL FIELDS - Remove or leave blank if not applicable
 title: 
@@ -19,9 +20,9 @@ blog: https://medium.com/@0xBahalaNa
 
 # Frameworks you work with (optional)
 frameworks:
-  - CJIS Security Policy v6.0
-  - FedRAMP (High baseline)
-  - NIST 800-53 Rev 5
+  - CJIS
+  - FedRAMP
+  - NIST 800-53
 
 # Professional certifications (optional)
 certifications:

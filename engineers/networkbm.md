@@ -6,7 +6,9 @@ specializations:
   - Cloud Security
   - Compliance Automation
   - Offensive Security
-  - Python & Rust
+languages:
+  - Python
+  - Rust
 
 
 # Social Links (optional)

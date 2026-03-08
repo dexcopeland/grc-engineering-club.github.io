@@ -3,13 +3,15 @@
 name: Akeem Williams
 github: ajwill85
 specializations:
-  - GRC Engineering
   - Compliance Automation
   - Cloud Security
   - Risk Management
   - Audit & Assurance
   - Third-Party Risk
   - Privacy
+languages:
+  - Python
+  - Terraform
 
 # OPTIONAL FIELDS - Remove or leave blank if not applicable
 title: GRC Engineer & ISO Lead Auditor
@@ -43,15 +45,14 @@ certifications:
   - TAISE
   - AWS Certified Cloud Practitioner
   - SSAP
-  - See portfolio link for more
 
 
 # What you're available for (optional)
 # Options: mentoring, speaking, consulting, open-source, hiring, freelance, collaboration
 available_for:
-  - Freelance
-  - Consulting
-  - Collaboration
+  - freelance
+  - consulting
+  - collaboration
 
 # Notable projects (optional)
 projects:

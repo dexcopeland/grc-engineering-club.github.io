@@ -1,0 +1,47 @@
+<div class="filters">
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search by name, skill, framework..." aria-label="Search engineers">
+  </div>
+
+  <div class="filter-group">
+    <h3 class="filter-label">Specializations</h3>
+    <div class="filter-chips" data-filter="specializations">
+      {% set allSpecs = collections.engineers | uniqueValues("specializations") %}
+      {% for spec in allSpecs %}
+      <button class="chip" data-value="{{ spec | lower }}">{{ spec }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <h3 class="filter-label">Frameworks</h3>
+    <div class="filter-chips" data-filter="frameworks">
+      {% set allFrameworks = collections.engineers | uniqueValues("frameworks") %}
+      {% for fw in allFrameworks %}
+      <button class="chip" data-value="{{ fw | lower }}">{{ fw }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <h3 class="filter-label">Languages & Tools</h3>
+    <div class="filter-chips" data-filter="languages">
+      {% set allLanguages = collections.engineers | uniqueValues("languages") %}
+      {% for lang in allLanguages %}
+      <button class="chip" data-value="{{ lang | lower }}">{{ lang }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <h3 class="filter-label">Available For</h3>
+    <div class="filter-chips" data-filter="available">
+      {% set allAvailable = collections.engineers | uniqueValues("available_for") %}
+      {% for a in allAvailable %}
+      <button class="chip" data-value="{{ a | lower }}">{{ a }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <button id="clear-filters" class="btn-clear" style="display:none">Clear all filters</button>
+</div>

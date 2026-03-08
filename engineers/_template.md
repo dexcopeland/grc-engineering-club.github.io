@@ -5,6 +5,14 @@ github: your-github-username
 specializations:
   - Cloud Security
   - Compliance Automation
+# Options: Audit & Assurance, Cloud Security, Compliance Automation, Identity & Access Management,
+#   Incident Response, Offensive Security, Privacy, Risk Management, Security Architecture,
+#   Security Governance, Security Operations, Third-Party Risk, Vulnerability Management
+
+# Programming languages & tools (optional)
+# Options: Bash, Go, JavaScript, OPA/Rego, OSCAL, PowerShell, Python, Rust, SQL, Terraform
+languages:
+  - Python
 
 # OPTIONAL FIELDS - Remove or leave blank if not applicable
 title: Your Job Title
@@ -28,7 +36,7 @@ certifications:
   - CISA
 
 # What you're available for (optional)
-# Options: mentoring, speaking, consulting, open-source, hiring, freelance, collaboration
+# Options (all lowercase): mentoring, speaking, consulting, open-source, hiring, freelance, collaboration
 available_for:
   - mentoring
   - open-source
